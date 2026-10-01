@@ -21,7 +21,7 @@ The device provides several applications through a custom touchscreen/physical-b
 
 ## System Architecture
 
-> **Status:** Under construction
+> **Status:** Under construction (need to draw it out on draw.io)
 
 ## Firmware Architecture
 
@@ -62,6 +62,26 @@ The firmware is organized into **Managers** and **Screens**.
 ```
 
 **Managers** abstract hardware and system functionality, while **Screens** manage UI rendering, navigation, and user interactions.
+
+---
+
+## Hardware
+
+| Component | Purpose |
+| :--- | :--- |
+| **Arduino Nano ESP32 / ESP32-S3** | Main MCU |
+| **ILI9341 240x320 TFT** | Main display w/ touch capabilities |
+| **6-button analog interface** | Physical controls |
+| **PCF8523 RTC** | Real-time clock |
+| **DF1201S MP3 Module** | Audio playback |
+| **LittleFS** | Local application and Bible data |
+
+## Communication Interface
+
+- **SPI** - TFT display and touchscreen
+- **I2C** - RTC
+- **UART** - MP3 module
+- **ADC/GPIO** - Physical control
 
 ---
 
